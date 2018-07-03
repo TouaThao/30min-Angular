@@ -11,7 +11,7 @@ foodApp.controller('FoodController', [function(){
     }
     self.press = function(){
         console.log(self.first)
-    self.secondPress = function(){
+    self.secondPress = function(){ 
         console.log(self.second)
     }
     }
