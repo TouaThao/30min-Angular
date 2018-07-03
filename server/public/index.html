@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="vendors/angular.min.js"></script>
+    <script src="script/client.js" ></script>
+</head>
+<body ng-app="foodApp">
+    <div ng-controller="FoodController as vm">
+        <p> {{vm.test}}</p>
+        <input type="text" ng-model="vm.first">
+        <button  ng-click="vm.press()">Take Name</button>
+        <input type="number" ng-model="vm.second">
+        <button ng-click="vm.secondPress()">Take Number</button>
+        <div ng-repeat="person in vm.people">
+            <p>This is: {{person}}</p>
+        </div>
+        
+        <div ng-click="vm.invisible()">
+        <button>Show hidden word</button>
+        </div>
+        <div ng-if="vm.showMe">
+            <p>I am the hidden word</p>
+        </div>
+    </div>
+    <h1></h1>
+</body>
+</html>
